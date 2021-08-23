@@ -1,0 +1,70 @@
+:root {
+  --bg-color: hsl(207, 26%, 17%);
+  --header-color: hsl(208, 23%, 22%);
+  --text-color: hsl(0, 0%, 52%);
+  --transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  --box-shadow: 5px 0 15px rgb(0 0 0 /0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+p {
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+body{
+  --bg-color: hsl(0, 0%, 95%);
+  --header-color: hsl(0, 0%, 100%);
+  --text-color: hsl(201, 25%, 11%);
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+  transition: var(--transition);
+}
+
+body.dark{
+  --bg-color: hsl(207, 26%, 17%);
+  --header-color: hsl(208, 23%, 22%);
+  --text-color: hsl(0, 0%, 90%);
+}
+
+.header{
+  padding: 1em;
+  margin-bottom: 1.5em;
+  background-color: var(--header-color);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.top-bar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-color{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:125px;
+}
+
+.toggle-color__icon {
+  color: var(--text-color);
+  margin-right: 0.5em;
+  transition: var(--transition);
+}
+.toggle-color__text {
+  font-size: 0.8rem;
+}
+

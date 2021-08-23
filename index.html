@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Country App</title>
+  </head>
+  <body class="dark">
+    <header class="header">
+      <div class="top-bar">
+        <h1>Where in the world?</h1>
+        <div id="toggle-color" class="toggle-color">
+          <i id="toggle-icon" class="far fa-sun toggle-color__icon"></i>
+          <p id="toggle-text" class="toggle-color__text">Light Mode</p>
+        </div>
+      </div>
+    </header>
+
+    <form id="form" class="form">
+      <div class="form__field">
+        <label for="search-input" class="form__label">
+          <i class="fas fa-search"></i>
+        </label>
+        <input
+          id="search-input"
+          class="form__input"
+          placeholder="Search for a country..."
+          type="text"
+        />
+      </div>
+      <select class="form__select" name="region" id="form-region">
+        <option value="default">Filter by Region</option>
+        <option value="africa">Africa</option>
+        <option value="americas">America</option>
+        <option value="asia">Asia</option>
+        <option value="europe">Europe</option>
+        <option value="oceania">Oceania</option>
+      </select>
+    </form>
+    <main class="main">
+      <div id="cards" class="cards"></div>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/a0ab449b77.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
