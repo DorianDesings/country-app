@@ -21,7 +21,7 @@ img {
   max-width: 100%;
 }
 
-body{
+body {
   --bg-color: hsl(0, 0%, 95%);
   --header-color: hsl(0, 0%, 100%);
   --text-color: hsl(201, 25%, 11%);
@@ -32,13 +32,13 @@ body{
   transition: var(--transition);
 }
 
-body.dark{
+body.dark {
   --bg-color: hsl(207, 26%, 17%);
   --header-color: hsl(208, 23%, 22%);
   --text-color: hsl(0, 0%, 90%);
 }
 
-.header{
+.header {
   padding: 1em;
   margin-bottom: 1.5em;
   background-color: var(--header-color);
@@ -46,17 +46,18 @@ body.dark{
   transition: var(--transition);
 }
 
-.top-bar{
+.top-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.toggle-color{
+.toggle-color {
   display: flex;
   align-items: center;
   justify-content: center;
-  width:125px;
+  width: 125px;
+  cursor: pointer;
 }
 
 .toggle-color__icon {
@@ -68,3 +69,87 @@ body.dark{
   font-size: 0.8rem;
 }
 
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 2em auto;
+}
+
+.form__field {
+  background-color: var(--header-color);
+  width: 100%;
+  margin-bottom: 2em;
+  border-radius: 0.5em;
+}
+
+.form__input {
+  width: 100%;
+  height: 56px;
+  padding-left: 4.5em;
+  color: var(--text-color);
+  background-color: inherit;
+  box-shadow: var(--box-shadow);
+  border: none;
+  outline: none;
+  border-radius: 0.5em;
+  transition: var(--transition);
+}
+
+::placeholder {
+  color: var(--text-color);
+}
+
+.form__label {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+}
+
+.form__select {
+  width: 70%;
+  border: none;
+  outline: none;
+  border-radius: 0.5em;
+  height: 56px;
+  padding: 0 2em;
+  color: var(--text-color);
+  background-color: var(--header-color);
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.main {
+  padding: 0 3em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  justify-content: center;
+  gap: 2em;
+}
+
+.card {
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5em;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+
+.card__img {
+  max-width: 100%;
+}
+
+.card__body {
+  padding: 1.5em;
+}
+
+.card__text {
+  font-size: 0.9rem;
+}
